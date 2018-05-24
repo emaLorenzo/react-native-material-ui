@@ -115,7 +115,7 @@ class Checkbox extends PureComponent {
                     size={size}
                 />
                 <Text style={styles.label}>
-                    Ema {this.props.label}
+                    {this.props.render() || this.props.label}
                 </Text>
             </View>
         );
