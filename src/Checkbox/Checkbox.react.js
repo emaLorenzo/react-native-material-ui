@@ -114,9 +114,11 @@ class Checkbox extends PureComponent {
                     onPress={this.onPress}
                     size={size}
                 />
-                <Text style={styles.label}>
-                    {this.props.render() || this.props.label}
-                </Text>
+                {this.props.render ? this.props.render() :
+                    <Text style={styles.label}>
+                        {this.props.label}
+                    </Text>
+                }
             </View>
         );
 
